@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+<extension
+         point="org.eclipse.ui.commands">
+      <category
+            name="Rostvertol"
+            id="ru.rostvertolplc.osapr.commands.category">
+      </category>
+      <command
+            name="Расставить позиции в структуре"
+            categoryId="ru.rostvertolplc.osapr.commands.category"
+            id="ru.rostvertolplc.osapr.tc05.commands.mainCommand">            
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.handlers">
+      <handler
+            commandId="ru.rostvertolplc.osapr.tc05.commands.mainCommand"
+            class="ru.rostvertolplc.osapr.tc05.handlers.MainHandler">
+      </handler>
+   </extension>
+   <extension
+         point="org.eclipse.ui.bindings">
+      <key
+            commandId="ru.rostvertolplc.osapr.tc05.commands.mainCommand"
+            contextId="org.eclipse.ui.contexts.window"
+            sequence="M1+6"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration">
+      </key>
+   </extension>
+   <extension
+	point="org.eclipse.ui.menus">
+		<menuContribution
+      	locationURI="toolbar:org.eclipse.ui.main.toolbar?after=additions">
+      		<toolbar
+            		id="ru.rostvertolplc.osapr.toolbars.mainToolbar">
+      			<command
+           			commandId="ru.rostvertolplc.osapr.tc05.commands.mainCommand"                
+           			icon="icons/fseapp_16.png"
+            		tooltip="Расставить позиции в структуре"               
+            		id="ru.rostvertolplc.osapr.tc05.toolbars.mainCommand">
+            		<visibleWhen>
+						<reference definitionId="com.teamcenter.rac.pse.inMainView" />
+  					</visibleWhen>            		
+        		</command>
+        	</toolbar>               
+		</menuContribution>
+   </extension>
+   
+   <extension point="org.eclipse.ui.menus">
+		<menuContribution locationURI="menu:org.eclipse.ui.main.menu">
+			<menu id="RVT.userMenu" label="Инструменты РВТ">
+				<command commandId="ru.rostvertolplc.osapr.tc05.commands.mainCommand">
+					<visibleWhen>
+						<reference definitionId="com.teamcenter.rac.pse.inMainView" />
+  					</visibleWhen>
+				</command>	       		   
+			</menu> 
+		</menuContribution> 
+    </extension>
+   
+</plugin>
