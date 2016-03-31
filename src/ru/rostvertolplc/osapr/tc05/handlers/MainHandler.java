@@ -6,18 +6,11 @@ import java.util.Map;
 import org.eclipse.core.commands.AbstractHandler;
 import org.eclipse.core.commands.ExecutionEvent;
 import org.eclipse.core.commands.ExecutionException;
-import org.eclipse.jface.dialogs.MessageDialog;
-import org.eclipse.ui.IWorkbenchWindow;
-import org.eclipse.ui.handlers.HandlerUtil; //import java.net.*;
-
-//import com.teamcenter.rac.aif.AbstractAIFUIApplication;
 import com.teamcenter.rac.aifrcp.AIFUtility;
-import com.teamcenter.rac.kernel.*; //import com.teamcenter.rac.aif.kernel.AIFComponentContext;
+import com.teamcenter.rac.kernel.*;
 import com.teamcenter.rac.aif.AbstractAIFUIApplication;
-import com.teamcenter.rac.aif.kernel.InterfaceAIFComponent;
 import com.teamcenter.rac.aif.kernel.AIFComponentContext;
 import com.teamcenter.rac.util.MessageBox;
-import ru.rostvertolplc.osapr.helpers.*;
 
 /**
  * Our sample handler extends AbstractHandler, an IHandler base class.
