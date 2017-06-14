@@ -120,14 +120,7 @@ public class MainHandler extends AbstractHandler {
 					"Teamcenter Error", MessageBox.ERROR);
 			return null;
 		}
-
-		/*
-		 * try { if (localTCComponentBOMLine.parent() == null) {
-		 * MessageBox.post("‚", "Teamcenter Error", 1);
-		 * return null; } } catch (TCException e) { // TODO Auto-generated catch
-		 * block e.printStackTrace(); }
-		 */
-		
+	
 		if (fillNode(localTCComponentBOMLine)) {
 			MessageBox.post(
 					"Позиции успешно расставлены",
@@ -136,31 +129,7 @@ public class MainHandler extends AbstractHandler {
 			MessageBox.post(
 					"При расстановке позиций произошла ошибка",
 					"Teamcenter", MessageBox.ERROR);	
-		}
-			
-		
-
-		
-
-		/*
-		 * if (localTCComponentBOMLine != null) { try {
-		 * localTCComponentBOMLine.lock();
-		 * localTCComponentBOMLine.setProperty("", "12");
-		 * localTCComponentBOMLine.setProperty("Quantity", "6"); // Find No.
-		 * localTCComponentBOMLine.save(); localTCComponentBOMLine.unlock(); }
-		 * catch (TCException e) { // TODO Auto-generated catch block
-		 * e.printStackTrace(); }
-		 * 
-		 * }
-		 */
-		/*
-		 * if (context != null) {
-		 * 
-		 * }
-		 * 
-		 * MessageDialog.openInformation( window.getShell(), "" +
-		 * context.getClientData().toString(), "000");
-		 */
+		}					
 		return null;
 	}
 }
